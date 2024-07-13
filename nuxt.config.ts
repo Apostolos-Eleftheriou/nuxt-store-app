@@ -15,7 +15,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Nuxt Store App' }
       ],
       link: [
-        { rel: 'stylesheet', href: 'https:/fonts.googleapis.com/icon?family=Material+Icons' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
       ]
     }
   },
