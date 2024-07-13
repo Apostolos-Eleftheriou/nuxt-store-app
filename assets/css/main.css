@@ -22,10 +22,14 @@
 }
 
 .carousel__pagination-button--active::after {
-  background-color: #12b488;
+  background-color: #8a4c2f;
   width: 10px;
   height: 10px;
 }
 .carousel__pagination {
   align-items: center;
+}
+
+.carousel__next--disabled, .carousel__prev--disabled {
+  display: none;
 }

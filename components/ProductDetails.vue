@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-10">
-            <div class="p-7">
+            <div class="p-7 min-h-72">
                 <img :src="product.image" alt="product" class="mx-auto my-7">
             </div>
             <div class="p-7">

@@ -1,12 +1,15 @@
 <template>
     <div>
-        <header class="shadow-sm fixed w-full z-50 backdrop-blur-md">
+        <header class="shadow-sm sticky top-0 w-full z-50 backdrop-blur-md">
             <nav class="container mx-auto p-4">
-                <NuxtLink to="/" class="font-bold">Nuxt Store Merch</NuxtLink>
+                <div class="flex items-center justify-start">
+                    <BackButton :showOnNav="true"/>
+                    <NuxtLink to="/" class="font-bold text-[#8a4c2f]">Nuxt Store Merch</NuxtLink>
+                </div>
             </nav>
         </header>
         <!-- output the page content -->
-        <div class="container mx-auto p-4  space-top">
+        <div class="container mx-auto p-4">
             <slot />
         </div>
         <footer class="container mx-auto p-4 flex justify-between border-t-2 ">
@@ -26,10 +29,7 @@
 </template>
 
 <style scoped>
-.router-link-active {
+/* .router-link-active {
     color: #12b488;
-}
-.space-top {
-    padding-top: 100px;
-}
+} */
 </style>
