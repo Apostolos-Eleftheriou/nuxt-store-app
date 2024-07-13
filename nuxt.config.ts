@@ -17,5 +17,13 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https:/fonts.googleapis.com/icon?family=Material+Icons' }
       ]
     }
+  },
+  runtimeConfig: {
+    // this wont be exposed to the front end so i cant use it there
+    currencyKey: process.env.CURRENCY_API_KEY,
+    // if i want to expose certain variables in the front end i can do it like this ↓
+    // public: {
+    //   currencyKey: process.env.CURRENCY_API_KEY
+    // }
   }
 })
