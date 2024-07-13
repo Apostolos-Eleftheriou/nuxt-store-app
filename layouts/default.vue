@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="shadow-sm bg-white">
+        <header class="shadow-sm fixed w-full z-50 backdrop-blur-md">
             <nav class="container mx-auto p-4 flex justify-between">
                 <NuxtLink to="/" class="font-bold">Nuxt Store</NuxtLink>
                 <ul class="flex gap-4">
@@ -11,7 +11,7 @@
             </nav>
         </header>
         <!-- output the page content -->
-        <div class="container mx-auto p-4">
+        <div class="mx-auto p-4 space-top">
             <slot />
         </div>
     </div>
@@ -20,5 +20,8 @@
 <style scoped>
 .router-link-active {
     color: #12b488;
+}
+.space-top {
+    padding-top: 100px;
 }
 </style>

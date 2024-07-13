@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <div class="grid grid-cols-4 gap-5">
+    <div class="flex items-center justify-center flex-col">
+        <BackButton />
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             <div v-for="p in products">
                 <ProductCard :product="p"/>
             </div>

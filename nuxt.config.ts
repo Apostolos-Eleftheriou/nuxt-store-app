@@ -2,10 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: [
-    '@nuxtjs/tailwindcss'
-  ],
+  modules: ['@nuxtjs/tailwindcss', "vue3-carousel-nuxt"],
+  css: ['~/assets/css/main.css'],
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'Nuxt Store App',
       meta: [
@@ -14,7 +15,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Nuxt Store App' }
       ],
       link: [
-        { rel: 'stylesheet', href: 'https:/fonts.googleapis.com/icon?family=Material+Icons' }
+        { rel: 'stylesheet', href: 'https:/fonts.googleapis.com/icon?family=Material+Icons' },
       ]
     }
   },

@@ -1,12 +1,12 @@
 <template>
     <div>
-        <header class="shadow-sm bg-white">
+        <header class="shadow-sm fixed w-full z-50 backdrop-blur-md">
             <nav class="container mx-auto p-4">
                 <NuxtLink to="/" class="font-bold">Nuxt Store Merch</NuxtLink>
             </nav>
         </header>
         <!-- output the page content -->
-        <div class="container mx-auto p-4">
+        <div class="container mx-auto p-4  space-top">
             <slot />
         </div>
         <footer class="container mx-auto p-4 flex justify-between border-t-2 ">
@@ -28,5 +28,8 @@
 <style scoped>
 .router-link-active {
     color: #12b488;
+}
+.space-top {
+    padding-top: 100px;
 }
 </style>

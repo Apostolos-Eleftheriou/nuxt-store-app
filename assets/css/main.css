@@ -1,0 +1,31 @@
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+
+}
+
+.page-enter-from {
+  transform: translateX(100%);
+}
+
+.carousel__pagination-button::after {
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  transition: all .3s ease;
+}
+
+.carousel__pagination-button--active::after {
+  background-color: #12b488;
+  width: 10px;
+  height: 10px;
+}
+.carousel__pagination {
+  align-items: center;
+}

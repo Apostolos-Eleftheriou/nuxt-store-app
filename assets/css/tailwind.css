@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-    @apply bg-gray-50
+    @apply  overflow-x-hidden font-sans;
+    /* bg-gradient-to-r from-emerald-800 to-neutral-900 */
 }
 
 @layer components {
