@@ -25,12 +25,3 @@
         </div>
     </div>
 </template>
-<script setup>
-const showCat = ref(false);
-const { data: categories } = await useFetch("https://fakestoreapi.com/products/categories");
-</script>
-<style scoped>
-/* .router-link-active {
-    color: #12b488;
-} */
-</style>

@@ -87,6 +87,11 @@ const imgs = ref([
     filter: contrast(.5);
     border-radius: 8px;
 }
+@media screen and (max-width: 768px) {
+    .lading_page_carousel_image {
+        height: 300px;
+    }
+}
 
 .landing_img {
     height: 600px;
