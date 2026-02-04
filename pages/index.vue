@@ -19,9 +19,9 @@
 
         </div>
         <h2 class="my-4 p-2 text-4xl text-center">Everything you need <br> We got it</h2>
-        <div v-if="products != null" class="container mx-auto">
+        <div v-if="Array.isArray(products) && products.length" class="container mx-auto">
             <Carousel v-bind="settings" :breakpoints="breakpoints">
-                <Slide v-for="p in products?.slice(0, 6)" :key="p.id">
+                <Slide v-for="p in products.slice(0, 6)" :key="p.id">
                     <ProductCard :product="p" :carouselWidth="true" />
                 </Slide>
 
@@ -31,9 +31,9 @@
                 </template>
             </Carousel>
         </div>
-        <div v-if="products != null" class="container mx-auto">
+        <div v-if="Array.isArray(products) && products.length" class="container mx-auto">
             <Carousel v-bind="settings" :breakpoints="breakpoints">
-                <Slide v-for="p in products?.slice(8, 14)" :key="p.id">
+                <Slide v-for="p in products.slice(8, 14)" :key="p.id">
                     <ProductCard :product="p" :carouselWidth="true" />
                 </Slide>
 
@@ -47,9 +47,9 @@
 </template>
 
 <script setup>
-const products = ref(null)
-const { data: productsData } = await useFetch("https://fakestoreapi.com/products")
-products.value = productsData.value
+const { data: products } = await useFetch(
+    "https://fakestoreapi.com/products"
+)
 const settings = ref({
     itemsToShow: 1,
     wrapAround: false,
