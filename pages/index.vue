@@ -48,7 +48,8 @@
 
 <script setup>
 const { data: products } = await useFetch(
-    "https://fakestoreapi.com/products"
+    "https://fakestoreapi.com/products",
+    { server: false, default: () => [] } // only fetch on client
 )
 const settings = ref({
     itemsToShow: 1,
