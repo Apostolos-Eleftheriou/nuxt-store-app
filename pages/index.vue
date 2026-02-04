@@ -21,7 +21,7 @@
         <h2 class="my-4 p-2 text-4xl text-center">Everything you need <br> We got it</h2>
         <div class="container mx-auto">
             <Carousel v-bind="settings" :breakpoints="breakpoints">
-                <Slide v-for="p in products.slice(0, 6)" :key="p.id">
+                <Slide v-for="p in products?.slice(0, 6)" :key="p.id">
                     <ProductCard :product="p" :carouselWidth="true" />
                 </Slide>
 
@@ -33,7 +33,7 @@
         </div>
         <div class="container mx-auto">
             <Carousel v-bind="settings" :breakpoints="breakpoints">
-                <Slide v-for="p in products.slice(8, 14)" :key="p.id">
+                <Slide v-for="p in products?.slice(8, 14)" :key="p.id">
                     <ProductCard :product="p" :carouselWidth="true" />
                 </Slide>
 
@@ -60,22 +60,22 @@ const breakpoints = ref({
     }
 })
 const imgs = ref([
-  {
-    url: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    text: "Designer Brands"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    text: "Designer Clothing"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    text: "Find Your Style"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    text: "Designer Accessories"
-  }
+    {
+        url: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        text: "Designer Brands"
+    },
+    {
+        url: "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        text: "Designer Clothing"
+    },
+    {
+        url: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        text: "Find Your Style"
+    },
+    {
+        url: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        text: "Designer Accessories"
+    }
 ])
 </script>
 
@@ -87,6 +87,7 @@ const imgs = ref([
     filter: contrast(.5);
     border-radius: 8px;
 }
+
 @media screen and (max-width: 768px) {
     .lading_page_carousel_image {
         height: 300px;
