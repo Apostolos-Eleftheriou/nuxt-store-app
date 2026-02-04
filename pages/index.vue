@@ -47,7 +47,9 @@
 </template>
 
 <script setup>
-const { data: products } = await useFetch("https://fakestoreapi.com/products")
+const products = ref(null)
+const { data: productsData } = await useFetch("https://fakestoreapi.com/products")
+products.value = productsData.value
 const settings = ref({
     itemsToShow: 1,
     wrapAround: false,
